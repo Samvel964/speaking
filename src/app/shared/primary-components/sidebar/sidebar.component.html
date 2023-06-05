@@ -1,0 +1,15 @@
+<div class="sidebar-wrapper" *ngIf="data">
+    <div class="sidebar-logo">
+        <!-- logo -->
+        <img src="assets/images/speaking.jpg" alt="">
+    </div>
+    
+    <ul class="navigation">
+        <ng-container *ngFor="let item of data">
+            <li class="navigation-item" [class.selected]="selectedItemId === item.id" (click)="navItemClickHandler(item.id)"> 
+                <span class="icon"><i-feather *ngIf="item.icon" [name]="item.icon"></i-feather></span> 
+                <span class="nav-label">{{ item.label }}</span>
+            </li>
+        </ng-container>
+    </ul>
+</div>

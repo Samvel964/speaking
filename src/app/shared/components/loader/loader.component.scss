@@ -1,0 +1,54 @@
+.loader-wrapper {
+    background-color: var(--color-loader-background);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 450px;
+        animation-name: img-loader;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes img-loader {
+            0% {
+                transform: scale(1);
+            };
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            from {
+                transform: scale(1);
+            }
+            
+        }
+    }
+
+    i-feather {
+        width: 140px;
+        height: 140px;
+        animation-name: loader;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes loader {
+            to {
+
+            };
+            from {
+                transform: rotate(-360deg);
+            }
+            
+        }
+    }
+}

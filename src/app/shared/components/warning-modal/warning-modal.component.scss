@@ -1,0 +1,36 @@
+.warning-modal-wrapper {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    padding: 20px;
+    color: var(--color-text-primary);
+
+    .image-container {
+        width: 80px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .title {
+        font-size: 25px;
+        font-size: 22px;
+        margin-top: 28px;
+    }
+
+    .actions {
+        width: 100%;
+        margin-top: 50px;
+
+        display: flex;
+        justify-content: center;
+
+        .confirm {
+            margin-left: 20px;
+        }
+    }
+}

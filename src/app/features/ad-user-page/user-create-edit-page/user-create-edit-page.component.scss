@@ -1,0 +1,41 @@
+.user-create-page-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+
+    .page-title {
+        margin-bottom: 60px;
+    }
+    
+    form.user-form {
+        width: 70%;
+
+        .grid-two {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .grid-three {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .action {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            
+            .submit {
+                margin-left: 15px;
+            }
+        }
+        
+    }
+}

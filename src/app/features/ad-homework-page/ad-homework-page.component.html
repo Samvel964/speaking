@@ -1,0 +1,24 @@
+<div class="homework-page-wrapper" *ngIf="homeWorks">
+    <div class="create-homework">
+        <p>Homeworks</p>
+        <button class="primary">Create homework</button>
+    </div>
+    <div class="table-wrapper">
+        <table class="table border table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let item of tableHeaderCols">{{ item.value }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let homework of homeWorks">
+                <th scope="row">{{ homework.id }}</th>
+                <td class="title">{{ homework.title }}</td>
+                <td>{{ homework.group.name }}</td>
+                <td>{{ homework.created_at }}</td>
+                <td><i-feather name="edit" class="edit-button"></i-feather><i-feather name="trash-2" class="delete-button"></i-feather></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>

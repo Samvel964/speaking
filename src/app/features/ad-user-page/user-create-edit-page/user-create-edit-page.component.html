@@ -1,0 +1,66 @@
+<div class="user-create-page-wrapper">
+    <h2 class="page-title">Create User</h2>
+    <form class="user-form" [formGroup]="createUserForm" (ngSubmit)="createFormSubmit()">
+
+        <div class="grid-two">
+            <mat-form-field class="sp-input" >
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="first_name">
+            </mat-form-field>
+
+            <mat-form-field class="sp-input" >
+                <mat-label>Last name</mat-label>
+                <input matInput formControlName="last_name">
+            </mat-form-field>
+        </div>        
+
+        <div class="grid-three">
+
+            <mat-form-field class="sp-input" >
+                <mat-label>Age</mat-label>
+                <input type="number" matInput formControlName="age">
+            </mat-form-field>
+            
+            <mat-form-field class="sp-input" >
+                <mat-label>Monthly fee</mat-label>
+                <input type="number" matInput formControlName="monthly_fee">
+            </mat-form-field>
+
+            <mat-form-field class="sp-input" >
+                <mat-label>Phone number</mat-label>
+                <input matInput formControlName="phone">
+            </mat-form-field>
+        </div>
+        
+        <div class="grid-three">
+
+            <mat-form-field class="sp-input" >
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field>
+            
+<!-- 
+            <mat-form-field class="sp-input" >
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field> -->
+
+            <mat-form-field class="sp-input">
+                <mat-label>Groups</mat-label>
+                <mat-select formControlName="group_id">
+                  <mat-option *ngFor="let group of groups" [value]="group.id">
+                    {{ group.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+        </div>
+
+
+        <div class="action">
+            <button class="outline" type="submit" (click)="navigateToBack()">Cancel</button>
+            <button class="primary submit" type="submit">{{editedUser ? 'Update' : 'Create'}}</button>
+        </div>
+    </form>
+</div>
+
